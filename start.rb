@@ -34,7 +34,11 @@ def pair_randomize(members, number_of_members)
     end
     break if members.length == 1
   end
-  puts "А #{members[0]} будет один :("
+  if members.empty?
+    abort
+  else
+    puts "А #{members[0]} будет один :("
+  end
 end
 
 pair_randomize(members, base_members_number)
